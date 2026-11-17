@@ -51,8 +51,6 @@ const D=[
  ['"Chup raho!"','hansi aa rahi hai','"Achha achha, aur sunao"'],
  ['"Bhaag yahan se"','ruko mat','"Arre ruko, thodi der aur baat karte hain"'],
  ['"Kuch nahi hua"','thoda mood off','"Thoda sa mana lijiye na 🙂"'],
- ['"Bahut irritating ho"','par cute bhi','"Irritating ho, par mere favourite ho"'],
- ['"Baat nahi karungi"','thodi der mein','"Aadhe ghante mein khud message karungi"']
 ];
 D.forEach(([a,s,b])=>{const c=document.createElement('div');c.className='cd';c.innerHTML=`<div class="ci"><div class="fa">${a}<small>tap kijiye 👆</small></div><div class="ba">${b}</div></div>`;c.onclick=()=>{c.classList.toggle('f');if(document.querySelectorAll('.cd.f').length===D.length&&!c.dataset.d){c.dataset.d=1;toast('Saare translation mil gaye! Ab golgappe 🫧');setTimeout(()=>go('s4'),2200)}};$('cards').appendChild(c)});
 $('cards').addEventListener('click',()=>{if(document.querySelectorAll('.cd.f').length===D.length&&!$('cards').dataset.d){$('cards').dataset.d=1;toast('Saare translation mil gaye! Ab golgappe 🫧',3000);setTimeout(()=>go('s4'),2600)}});
